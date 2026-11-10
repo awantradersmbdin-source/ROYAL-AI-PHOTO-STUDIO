@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROYAL AI PHOTO STUDIO</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080d1b;color:white;font-family:Arial,sans-serif;text-align:center}
+header{padding:35px 15px;background:linear-gradient(135deg,#101c38,#38265b)}
+h1{color:#f6cf70;font-size:28px}
+header p{color:#ddd}
+main{padding:25px 15px}
+.panel{max-width:500px;margin:20px auto;padding:25px 18px;background:#151e32;border:1px solid #b18a42;border-radius:18px}
+h2{color:#f6cf70}
+input{width:100%;padding:14px;margin:15px 0;color:white;background:#26334c;border-radius:10px}
+button{padding:13px 22px;background:#d6ad58;color:#111;border:0;border-radius:9px;font-weight:bold}
+#preview{max-width:100%;margin-top:20px;border-radius:12px}
+footer{padding:20px;color:#aaa;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<h1>ROYAL AI PHOTO STUDIO</h1>
+<p>Your Photo, Your Style</p>
+</header>
+<main>
+<div class="panel">
+<h2>Welcome to Royal AI</h2>
+<p>Upload your photo and preview it here.</p>
+<input type="file" id="photo" accept="image/*">
+<img id="preview" alt="" style="display:none">
+<p>More AI photo editing features coming soon!</p>
+</div>
+</main>
+<footer>© 2026 ROYAL AI PHOTO STUDIO</footer>
+<script>
+document.getElementById('photo').addEventListener('change',function(e){
+const file=e.target.files[0];
+if(file){
+const img=document.getElementById('preview');
+img.src=URL.createObjectURL(file);
+img.style.display='block';
+}
+});
+</script>
+</body>
+</html>
